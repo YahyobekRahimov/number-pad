@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import styled from "@emotion/styled";
+import Backspace from "/src/assets/backspace.svg?react";
 
 const companies = [
    {
@@ -63,6 +64,9 @@ const NumberButton = styled.button`
    cursor: pointer;
    border-radius: 0.3rem;
    font-size: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 `;
 
 const NumbersWrapper = styled.div`
@@ -161,7 +165,7 @@ function App() {
                   </NumberButton>
                ))}
                <NumberButton onClick={() => handleDelete()}>
-                  X
+                  <Backspace className="h-[2rem] w-max" />
                </NumberButton>
             </NumbersWrapper>
          </Container>
